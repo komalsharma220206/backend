@@ -1,0 +1,3 @@
+this is an amazing promise
+
+ compared to callback hell
