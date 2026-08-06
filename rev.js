@@ -1,14 +1,16 @@
-const { createServer } = require('node:http');
-
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1> hello world </h1>');
+const fs=require("fs");
+console.log("file is creating");
+fs.writeFile("komal.txt","komal is krishna's servant",()=>{
+    console.log("done making file");
 });
+console.log("file has created");
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+fs.appendFile("komal.txt"," also radharani's servant",(error)=>{
+    if(error){
+        console.log("error");
+        return;
+    }
+    fs.readFile("komal.txt",(error,data)=>{
+    console.log(data.toString())
+})
+})
