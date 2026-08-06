@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border:2px solid black;
+            height:100px;
+            width:100px;
+            background-color: plum;
+            animation: komal 1s ease-in-out  infinite forwards ;
+        }
+        @keyframes komal {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-20px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+
+
+        }
+        body{
+            height: 100vh;
+        }
+        .black{
+            background: linear-gradient(
+        135deg,
+        #ff9a9e 0%,
+        #fad0c4 40%,
+        #fbc2eb 70%,
+        #a18cd1 100%
+    );
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+    <button >
+        click me
+    </button>
+    <script>
+         let button=document.querySelector("button");
+         let body=document.body;
+         button.addEventListener("click",(e)=>{
+              body.classList.toggle("black")
+         })
+    </script>
+</body>
+</html>

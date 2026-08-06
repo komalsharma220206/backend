@@ -15,7 +15,7 @@
   },
   "license": "ISC",
   "author": "komal",
-  "type": "module",
+  "type": "commonjs",
   "main": "commonjs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

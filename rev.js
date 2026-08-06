@@ -5,8 +5,8 @@ const port = 3000;
 
 const server = createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World3');
+  res.setHeader('Content-Type', 'text/html');
+  res.end('<h1> hello world </h1>');
 });
 
 server.listen(port, hostname, () => {
